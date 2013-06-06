@@ -1,0 +1,35 @@
+<h1>Listing users</h1>
+
+<table class="table">
+  <tr>
+    <th>Username</th>
+    <th>Email</th>
+    <th>Friend code</th>
+    <th>Console user</th>
+    <th>Fruit</th>
+    <th>Notes</th>
+    <th>Avatar</th>
+    <th>Twitter</th>
+  </tr>
+
+<% @users.each do |user| %>
+  <tr>
+    <td><%= link_to user.username, user %></td>
+    <td><%= user.email %></td>
+    <td><%= user.friend_code %></td>
+    <td><%= user.console_user %></td>
+    <td><%= user.fruit %></td>
+    <td><%= user.notes %></td>
+    <td><%= user.avatar %></td>
+    <td><%= user.twitter %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+
+
+
+<%= link_to 'New User', new_user_path, :class => "btn" %>
+
