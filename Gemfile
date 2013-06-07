@@ -19,6 +19,7 @@ end
 group :production do
   gem 'pg'
   gem 'unicorn'
+  gem 'newrelic_rpm'
 end
 
 # Gems used only for assets and not required

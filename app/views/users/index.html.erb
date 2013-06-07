@@ -11,7 +11,7 @@
 
 <% @users.each do |user| %>
   <tr>
-    <td><%= user.twitter %></td>
+    <td><a href="http://twitter.com/<%= user.twitter %>" target="_blank">@<%= user.twitter %></a></td>
     <td><%= user.console_user %></td>
     <td><%= user.friend_code %></td>
     <td><%= user.fruit %></td>
