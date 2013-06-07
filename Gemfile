@@ -9,10 +9,16 @@ gem 'cancan'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+
 
 group :development do
 	gem 'annotate', '2.5.0'
+	gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg'
+  gem 'unicorn'
 end
 
 # Gems used only for assets and not required
