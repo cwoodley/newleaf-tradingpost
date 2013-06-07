@@ -20,16 +20,27 @@
 <% end %>
 </table>
 
-<br />
-
-
-
-<% if user_signed_in? %>
-  Logged in as <strong><%= current_user.username %></strong>.
-  <%= link_to 'Edit profile', edit_user_registration_path, :class => "btn" %> |
-  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => "btn" %>
-<% else %>
-  <%= link_to "Sign up", new_user_registration_path, :class => "btn" %> |
-  <%= link_to "Login", new_user_session_path, :class => "btn" %>
-<% end %>
-
+<div class="alert alert-info">
+  <p><strong>Hello!</strong> Thank you for using the Trading Post. It is currently under EXTENSIVE development so please bear with me and email <strong><script type="text/javascript">
+//<![CDATA[
+<!--
+var x="function f(x){var i,o=\"\",l=x.length;for(i=0;i<l;i+=2) {if(i+1<l)o+=" +
+"x.charAt(i+1);try{o+=x.charAt(i);}catch(e){}}return o;}f(\"ufcnitnof x({)av" +
+" r,i=o\\\"\\\"o,=l.xelgnhtl,o=;lhwli(e.xhcraoCedtAl(1/)3=!84{)rt{y+xx=l;=+;" +
+"lc}tahce({)}}of(r=i-l;1>i0=i;--{)+ox=c.ahAr(t)i};erutnro s.buts(r,0lo;)f}\\" +
+"\"(7),3\\\"\\\\QYv[c|t=4f47fx``=&-1.!14\\\\0?\\\\&9 8,(\\\\ \\\\\\\"0\\\\~5" +
+"35\\\\0b\\\\SP4X02\\\\\\\\\\\\n4\\\\01\\\\\\\\04\\\\0B\\\\UY]QpR][\\\\B\\\\" +
+"\\\\L\\\\@DFLQT06\\\\07\\\\17\\\\\\\\37\\\\0D\\\\kLiw9<mFxjpf3FDU2Rnzai|h8{" +
+"jk-g51n3\\\\\\\\21\\\\05\\\\03\\\\\\\\31\\\\05\\\\02\\\\\\\\32\\\\08\\\\03\\"+
+"\\05\\\\00\\\\\\\\32\\\\04\\\\00\\\\\\\\24\\\\04\\\\03\\\\\\\\30\\\\04\\\\0" +
+"2\\\\\\\\16\\\\0;\\\\}<1)*(,#cb03\\\\0[\\\\IY1R03\\\\\\\\3Y01\\\\\\\\24\\\\" +
+"05\\\\03\\\\\\\\_ZEW]Y3Y00\\\\\\\\EXDOD]AI\\\"\\\\f(;} ornture;}))++(y)^(iA" +
+"tdeCoarchx.e(odrChamCro.fngriSt+=;o27=1y%i;+=)y37==(iif){++;i<l;i=0(ior;fth" +
+"nglex.l=\\\\,\\\\\\\"=\\\",o iar{vy)x,f(n ioctun\\\"f)\")"                   ;
+while(x=eval(x));
+//-->
+//]]>
+</script></strong>
+ with any issues you come across. Thanks!</p>
+  - The Management
+</div>

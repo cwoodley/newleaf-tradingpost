@@ -5,6 +5,7 @@ gem 'bootstrap-sass', '2.1'
 gem 'bootstrap_helper', '3.2.2.0'
 gem 'devise'
 gem 'cancan'
+gem 'chosen-rails'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

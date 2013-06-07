@@ -1,53 +1,87 @@
 <h2>Edit Profile</h2>
 
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, :class => "form-horizontal" }) do |f| %>
   <%= devise_error_messages! %>
 
-  <div class="field"><%= f.label :username %><br />
-  <%= f.text_field :username, :autofocus => true %></div>
+  <div class="control-group">
+    <%= f.label "Username", :class => "control-label" %>
+    <div class="controls">
+      <%= f.text_field :username, :autofocus => true %>
+    </div>
+  </div>
 
-  <div class="field"><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
+  <div class="control-group">
+    <%= f.label :twitter, :class => "control-label" %>
+    <div class="controls">
+      <div class="input-prepend">
+      <span class="add-on">@</span>
+      <%= f.text_field :twitter %>
+      </div>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :email, :class => "control-label" %>
+    <div class="controls">
+      <%= f.email_field :email %>
+    </div>
+  </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 
-  <div class="field"><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-  <%= f.password_field :password, :autocomplete => "off" %></div>
-
-  <div class="field"><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
-
-  <div class="field">
-    <%= f.label :friend_code %><br />
-    <%= f.text_field :friend_code %>
-  </div>
-  <div class="field">
-    <%= f.label :console_user %><br />
-    <%= f.text_field :console_user %>
-  </div>
-  <div class="field">
-    <%= f.label :fruit %><br />
-    <%= f.text_field :fruit %>
-  </div>
-  <div class="field">
-    <%= f.label :notes %><br />
-    <%= f.text_field :notes %>
-  </div>
-  <div class="field">
-    <%= f.label :avatar %><br />
-    <%= f.text_field :avatar %>
-  </div>
-  <div class="field">
-    <%= f.label :twitter %><br />
-    <%= f.text_field :twitter %>
+  <div class="control-group">
+    <%= f.label :password, :class => "control-label" %>
+    <div class="controls">
+      <%= f.password_field :password, :autocomplete => "off" %>
+      <span class="help-inline">(leave blank if you don't want to change it)</span>
+    </div>
   </div>
 
-  <div class="field"><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-  <%= f.password_field :current_password %></div>
+  <div class="control-group">
+    <%= f.label :password_confirmation, :class => "control-label" %>
+    <div class="controls">
+      <%= f.password_field :password_confirmation %>
+    </div>
+  </div>
 
-  <div><%= f.submit "Update", class: "btn btn-large btn-primary" %></div>
+  <div class="control-group">
+    <%= f.label :friend_code, :class => "control-label" %>
+    <div class="controls">
+      <%= f.text_field :friend_code %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :console_user, :class => "control-label" %>
+    <div class="controls">
+      <%= f.text_field :console_user %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :fruit, :class => "control-label" %>
+    <div class="controls">
+      <%= f.text_area :fruit %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :notes, :class => "control-label" %>
+    <div class="controls">
+      <%= f.text_area :notes %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+  <div class="control-group">
+    <%= f.label :current_password, :class => "control-label" %>
+    <div class="controls">
+      <%= f.password_field :current_password %>
+      <span class="help-inline">(we need your current password to confirm your changes)</span>
+    </div>
+  </div>
+    <%= f.submit "Update", class: "btn btn-large btn-primary" %>
+  </div>
 <% end %>
 
 <h3>Cancel my account</h3>

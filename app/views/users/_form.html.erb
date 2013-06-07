@@ -37,7 +37,11 @@
   </div>
   <div class="field">
     <%= f.label :fruit %><br />
-    <%= f.text_field :fruit %>
+    <%= select_tag "fruit", "<option>Apples</option>
+                              <option>Bananas</option>
+                              <option>Cherries</option>
+                              <option>Coconuts</option>".html_safe, :prompt => "Select fruit", :class => "chzn-select", :multiple => true %>
+
   </div>
   <div class="field">
     <%= f.label :notes %><br />
