@@ -66,4 +66,6 @@ Tradingpost::Application.configure do
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
   config.action_mailer.default_url_options = { :host => 'fathomless-reaches-8017.herokuapp.com' }
+
+  GA.tracker = "UA-41603326-1"
 end
